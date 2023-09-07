@@ -1,87 +1,3 @@
-// import { Box, Button, Typography } from "@mui/material";
-// import axios from "axios";
-// import { useState } from "react";
-// import { useParams } from "react-router-dom";
-
-
-
-// function ProductDetail() {
-
-
-
-//     let params = useParams();
-
-//     const [model, setModel] = useState({});
-  
-//     let getData = () => {
-//       axios
-//         .get(`https://fakestoreapi.com/products/${params.id}`)
-//         .then((res) => {
-//           console.log(res.data);
-//           setModel({ ...res.data });
-//         })
-//         .catch((err) => {
-//           console.log(err);
-//         });
-//     };
-    
-//     return (
-//       <>
-//             <h1>ProductDetail</h1>
-//             <Box>
-//         <Typography>Single Post</Typography>
-//         <Button onClick={getData} variant="contained">
-//           Get Single Post
-//         </Button>
-//         <Typography variant="h3">{model.title ?? ""}</Typography>
-//         <Typography className="d-block" variant="body">
-//           {model.rating ?? ""}
-//         </Typography>
-//         <Typography className="d-block" variant="body">
-//           User Id : {model.id ?? ""}
-//         </Typography>
-//       </Box>
-
-//       </>
-//     );
-//   }
-  
-//   export default ProductDetail;
-// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-// // import React, { useState, useEffect } from 'react';
-// // import { useParams } from 'react-router-dom';
-// // import axios from 'axios';
-
-// function ProductDetail() {
-// //   const { id } = useParams();
-// //   const [product, setProduct] = useState(null);
-
-// //   useEffect(() => {
-// //     axios.get(`https://fakestoreapi.com/products/${id}`)
-// //       .then((response) => setProduct(response.data))
-// //       .catch((error) => console.error(error));
-// //   }, [id]);
-
-// //   if (!product) {
-// //     return <div>Loading...</div>;
-// //   }
-
-//   return (
-//     <div className="product-detail">
-//        {/* <img src={product.image} alt={product.title} />
-//        <h2>{product.title}</h2>
-//        <p>{product.description}</p>
-//        <p>Price: ${product.price}</p> */}
-//      </div>
-//   );
-// }
-
-// export default ProductDetail;
-
-
-
 import { Box, Button, Typography } from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
@@ -154,7 +70,6 @@ export default function ProductDetail(){
       </Text>
 
       <Text py='2'>
-      {/* <b>Rating :   </b>{model.title} */}
       <b>Rating : </b>{model.rating?.rate} ({model.rating?.count} ratings)
       </Text>
     </CardBody>
@@ -164,45 +79,6 @@ export default function ProductDetail(){
 </Card>
 
 
-
-
-
-
-
-
-
-
-   
-   {/* <Box>
-        <Typography>Theres your Data</Typography>
-        <Button onClick={renderData} variant="contained">
-          Get Single Post
-        </Button>
-
-        <Typography variant="h3">{model.title ?? ""}
-        </Typography>
-
-        <Typography className="d-block" variant="body">
-          {model.price ?? ""}
-        </Typography>
-
-        <Typography className="d-block" variant="body">
-          User Id : {model.price?? ""}
-        </Typography>
-
-        <Typography className="d-block" variant="body">
-          User Id : {model.description?? ""}
-        </Typography>
-
-        <Typography className="d-block" variant="body">
-          User Id : {model.category?? ""}
-        </Typography>
-
-        <Typography className="d-block" variant="body">
-          User Id : {model.id?? ""}
-        </Typography>
-
-      </Box> */}
         </>
     )
 }
